@@ -1,0 +1,27 @@
+{
+  "name": "psiTurk on Heroku",
+  "description": "A starter kit for putting psiTurk on Heroku.",
+  "repository": "https://github.com/jmuchovej/psiturk-on-heroku",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["psiturk", "mturk", "qualtrics"],
+  "buildpacks": [
+    { "url": "heroku/python" }
+  ],
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "env": {
+    "ON_CLOUD": {
+        "description": "Informs psiTurk to use 'cloud mode'.",
+        "value": "1"
+    },
+    "AWS_ACCESS_KEY_ID": {
+        "description": "Enables psiTurk to programmatically access your AWS resources.",
+        "value": "generator"
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+        "description": "Enables psiTurk to programmatically access your AWS resources.",
+        "value": "generator"
+    }
+  }
+}
